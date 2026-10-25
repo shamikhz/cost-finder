@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test src/test/calculations.test.js"
+    "test": "node --test src/test/calculations.test.js src/test/pwa-and-offline.test.js"
   },
   "dependencies": {
     "lucide-react": "^0.475.0",

@@ -1,0 +1,32 @@
+{
+  "name": "Hidden Cost Finder – Calculate Your Yearly Waste",
+  "short_name": "Cost Finder",
+  "description": "Calculate potential monthly and annual costs of everyday waste, subscriptions, and recurring expenses.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0d9488",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["finance", "utilities", "productivity"]
+}

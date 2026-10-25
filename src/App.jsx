@@ -11,7 +11,9 @@ import EducationalContent from './components/EducationalContent';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import AdPlaceholder from './components/AdPlaceholder';
+import OfflineBlocker from './components/OfflineBlocker';
 
+import { useOnlineStatus } from './hooks/useOnlineStatus';
 import { calculateAggregateResults } from './utils/calculations';
 import { DEFAULT_CURRENCY_CODE } from './utils/currency';
 import { SAMPLE_SCENARIOS } from './data/examples';
@@ -24,6 +26,7 @@ import {
 } from './utils/storage';
 
 export default function App() {
+  const { isOnline, isChecking, checkConnection } = useOnlineStatus();
   const [currency, setCurrency] = useState(() => loadSavedCurrency(DEFAULT_CURRENCY_CODE));
   const [items, setItems] = useState(() => {
     const loaded = loadActiveItems(null);
@@ -196,6 +199,13 @@ export default function App() {
 
       {/* 13. Privacy & Footer */}
       <Footer onClearLocalData={handleClearAllLocalData} />
+
+      {/* 14. Offline Mode Blocker (Enforces that app does NOT work offline) */}
+      <OfflineBlocker
+        isOnline={isOnline}
+        isChecking={isChecking}
+        onRetry={checkConnection}
+      />
     </div>
   );
 }
