@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hiddencostfinder.pages.dev/sitemap.xml
